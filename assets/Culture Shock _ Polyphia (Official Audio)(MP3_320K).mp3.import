@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b01nuh6dcafvb"
+path="res://.godot/imported/Culture Shock _ Polyphia (Official Audio)(MP3_320K).mp3-8aef1f0db4d3ede11ac4ad6b83ed870c.mp3str"
+
+[deps]
+
+source_file="res://assets/Culture Shock _ Polyphia (Official Audio)(MP3_320K).mp3"
+dest_files=["res://.godot/imported/Culture Shock _ Polyphia (Official Audio)(MP3_320K).mp3-8aef1f0db4d3ede11ac4ad6b83ed870c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

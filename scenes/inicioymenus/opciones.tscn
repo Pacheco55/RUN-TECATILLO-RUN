@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://bybb6erljiayq"]
+
+[ext_resource type="Script" path="res://scenes/inicioymenus/opciones.gd" id="1_mugi7"]
+[ext_resource type="Texture2D" uid="uid://md3fkk5kmflm" path="res://assets/EndGameTable.png" id="2_ayce8"]
+[ext_resource type="Texture2D" uid="uid://ck8ga01nii8pa" path="res://assets/7.png" id="2_p7g0t"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_n2ns6"]
+device = -1
+keycode = 4194308
+
+[sub_resource type="Shortcut" id="Shortcut_n1drs"]
+events = [SubResource("InputEventKey_n2ns6")]
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mugi7")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasModulate"]
+position = Vector2(604.8, 359.2)
+scale = Vector2(0.523611, 0.55679)
+texture = ExtResource("2_p7g0t")
+
+[node name="AtrasBtn" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 600.0
+offset_right = 1774.0
+offset_bottom = 1245.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.67451)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 150
+shortcut = SubResource("Shortcut_n1drs")
+text = "back"
+icon = ExtResource("2_ayce8")
+flat = true
+icon_alignment = 1
+
+[node name="MasterSlidr" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 152.0
+offset_right = 840.0
+offset_bottom = 168.0
+min_value = -20.0
+max_value = 5.0
+
+[node name="VolumLbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 500.0
+offset_top = 56.0
+offset_right = 716.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "Volume"
+
+[node name="Fullscrnlbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 428.0
+offset_top = 192.0
+offset_right = 770.0
+offset_bottom = 255.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "fullscreen"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 280.0
+offset_right = 644.0
+offset_bottom = 304.0
+
+[connection signal="pressed" from="AtrasBtn" to="." method="_on_atras_btn_pressed"]
+[connection signal="value_changed" from="MasterSlidr" to="." method="_on_master_slidr_value_changed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

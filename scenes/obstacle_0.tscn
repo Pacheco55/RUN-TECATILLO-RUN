@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cokal2qurt8qw"]
+
+[ext_resource type="Texture2D" uid="uid://xciadkf8uuq1" path="res://assets/ufo png.png" id="1_2dhak"]
+[ext_resource type="Texture2D" uid="uid://cg5seb5rhg37h" path="res://assets/relojdogital.png" id="2_avhwu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q77qr"]
+radius = 26.9678
+height = 88.0903
+
+[node name="Obstacle0" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-3, -15)
+rotation = -0.713077
+scale = Vector2(0.159259, 0.198062)
+texture = ExtResource("1_2dhak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -11)
+rotation = -1.52193
+shape = SubResource("CapsuleShape2D_q77qr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-3, -8)
+scale = Vector2(0.06375, 0.0816883)
+texture = ExtResource("2_avhwu")

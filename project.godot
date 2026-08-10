@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="RUN TECATILLO MOVILE"
+config/description="College Project Movile Game , developed for the evidence of knowledge about visual programging , assited by my wife y tasted by my son , so much thanks Andrea & Perrugu .
+(INFINYTE RUN , GOOGLE DINO STYLE )"
+run/main_scene="res://scenes/inicioymenus/inicio_1.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+run/frame_delay_msec=70
+config/icon="res://assets/tecatillofacecuadro.png"
+
+[autoload]
+
+MusicGrl="*res://scenes/inicioymenus/music_grl.tscn"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=720
+window/size/mode=4
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom_font="res://assets/Cyberfall Italic.otf"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0

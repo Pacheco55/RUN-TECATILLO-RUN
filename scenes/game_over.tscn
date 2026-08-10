@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://ojsmg62u28t5"]
+
+[ext_resource type="Texture2D" uid="uid://dq0b6j605y51s" path="res://assets/InShot_20240722_174846822.png" id="1_aege6"]
+[ext_resource type="Texture2D" uid="uid://j0lewgtmr1yk" path="res://assets/InShot_20240722_172804791.png" id="2_oxoh8"]
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.0784314)
+
+[node name="Entrada" type="Sprite2D" parent="ColorRect"]
+position = Vector2(600, 350)
+scale = Vector2(0.625, 0.692593)
+texture = ExtResource("1_aege6")
+
+[node name="Tecatillo" type="Sprite2D" parent="ColorRect"]
+position = Vector2(176, 600)
+scale = Vector2(0.40788, 0.316667)
+texture = ExtResource("2_oxoh8")
+
+[node name="RestartGO" type="Button" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -976.0
+offset_top = 96.0
+offset_right = -734.0
+offset_bottom = 155.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 40
+text = "RESTART ?"
+flat = true
+metadata/_edit_group_ = true
+
+[node name="ExitGO" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 867.0
+offset_top = 96.0
+offset_right = 965.0
+offset_bottom = 155.0
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+flat = true
+metadata/_edit_group_ = true
+
+[node name="Mesage" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -468.0
+offset_top = -214.5
+offset_right = 468.0
+offset_bottom = -143.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 55
+text = "¡ Vamos Colmillo, Tu Puedes 
+     con eso y mucho mas !"

@@ -1,0 +1,153 @@
+[gd_scene load_steps=10 format=3 uid="uid://wi41bymgvypb"]
+
+[ext_resource type="Script" path="res://scenes/inicioymenus/inicio_menu.gd" id="1_qy4ir"]
+[ext_resource type="Texture2D" uid="uid://md3fkk5kmflm" path="res://assets/EndGameTable.png" id="1_wv2hm"]
+[ext_resource type="Script" path="res://scenes/Exit.gd" id="2_1c14r"]
+[ext_resource type="Texture2D" uid="uid://ck8ga01nii8pa" path="res://assets/7.png" id="2_54p7j"]
+[ext_resource type="Texture2D" uid="uid://ibtrwsdw4wdc" path="res://assets/tecatillorecargadoder.png" id="3_htwpt"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_6oloh"]
+device = -1
+keycode = 4194325
+
+[sub_resource type="Shortcut" id="Shortcut_fo5io"]
+events = [SubResource("InputEventKey_6oloh")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_vjtcl"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_wip1n"]
+events = [SubResource("InputEventKey_vjtcl")]
+
+[node name="InicioMenu" type="Node"]
+script = ExtResource("1_qy4ir")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/ColorRect"]
+position = Vector2(600, 358)
+scale = Vector2(0.520833, 0.558642)
+texture = ExtResource("2_54p7j")
+
+[node name="Runtecatillorun" type="Sprite2D" parent="CanvasLayer"]
+
+[node name="Tecatillorecargadoder" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(216, 456)
+scale = Vector2(0.2456, 0.235826)
+texture = ExtResource("3_htwpt")
+flip_h = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_right = 437.0
+offset_bottom = 573.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 150
+text = "¡ RUN
+TECATILLO
+ RUN !"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 248.0
+offset_right = 638.0
+offset_bottom = 826.317
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.67451)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 150
+shortcut = SubResource("Shortcut_fo5io")
+text = "PLAY"
+icon = ExtResource("1_wv2hm")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_1c14r")
+
+[node name="Options" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = 248.0
+offset_right = 878.0
+offset_bottom = 826.317
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.67451)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 105
+shortcut = SubResource("Shortcut_fo5io")
+text = "options
+"
+icon = ExtResource("1_wv2hm")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_1c14r")
+
+[node name="Exit" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 368.0
+offset_top = 248.0
+offset_right = 1102.0
+offset_bottom = 826.317
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.862745, 0.847059, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.635294)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 200
+shortcut = SubResource("Shortcut_wip1n")
+text = "EXIT"
+icon = ExtResource("1_wv2hm")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_1c14r")
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=3 uid="uid://uv2ftf2c01xl"]
+
+[ext_resource type="Script" path="res://scenes/inicioymenus/present_scene.gd" id="1_gupcu"]
+
+[sub_resource type="Animation" id="Animation_3fffk"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hda1h"]
+resource_name = "fade_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 41), Vector2(0, 98), Vector2(0, 144), Vector2(0, 297), Vector2(0, 377), Vector2(0, 447), Vector2(0, 522), Vector2(0, 575), Vector2(0, 630), Vector2(0, 655), Vector2(0, 715), Vector2(0, 721)]
+}
+
+[sub_resource type="Animation" id="Animation_vem6w"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.0588235), Color(0, 0, 0, 0.0980392), Color(0, 0, 0, 0.203922), Color(0, 0, 0, 0.294118), Color(0, 0, 0, 0.372549), Color(0, 0, 0, 0.462745), Color(0, 0, 0, 0.568627), Color(0, 0, 0, 0.592157), Color(0, 0, 0, 0.666667), Color(0, 0, 0, 0.819608)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d37vg"]
+_data = {
+"RESET": SubResource("Animation_3fffk"),
+"fade_in": SubResource("Animation_hda1h"),
+"fade_out": SubResource("Animation_vem6w")
+}
+
+[node name="PresentScene" type="Node2D"]
+script = ExtResource("1_gupcu")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_right = 1208.0
+offset_bottom = 728.0
+color = Color(0, 0, 0, 1)
+
+[node name="Mesage" type="Label" parent="ColorRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -284.0
+offset_right = 226.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.333333, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 55
+text = "Developed By :
+
+Pacheco
+Rojas
+Julio
+César"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect3"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="ColorRect3"]
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 640.0
+offset_right = 761.0
+offset_bottom = 711.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.333333, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 55
+text = "1323144310"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d37vg")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1208.0
+offset_bottom = 728.0
+color = Color(0, 0, 0, 0)

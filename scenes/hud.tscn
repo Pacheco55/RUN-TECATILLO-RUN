@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqbptf3cp6me5"]
+
+[ext_resource type="Script" path="res://scenes/Exit.gd" id="1_0co4t"]
+[ext_resource type="Texture2D" uid="uid://md3fkk5kmflm" path="res://assets/EndGameTable.png" id="1_hl30u"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_vjtcl"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_xryyx"]
+events = [SubResource("InputEventKey_vjtcl")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_6oloh"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="Shortcut" id="Shortcut_ceecq"]
+events = [SubResource("InputEventKey_6oloh")]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Score" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0, 0.901961, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "SCORE : "
+
+[node name="HScore" type="Label" parent="."]
+offset_left = 728.0
+offset_top = 8.0
+offset_right = 1036.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 45
+text = "HIGH SCORE :"
+
+[node name="Start" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -11.5
+offset_right = 24.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 150
+text = "START"
+
+[node name="Opciones" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 440.0
+offset_top = 256.0
+offset_right = 1174.0
+offset_bottom = 834.317
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.635294)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 100
+shortcut = SubResource("Shortcut_xryyx")
+text = "options"
+icon = ExtResource("1_hl30u")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_0co4t")
+
+[node name="Restart" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = 256.0
+offset_right = 158.0
+offset_bottom = 834.317
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.0862745, 0.878431, 1)
+theme_override_colors/font_hover_color = Color(0.360784, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.67451)
+theme_override_constants/outline_size = 15
+theme_override_constants/icon_max_width = 650
+theme_override_font_sizes/font_size = 100
+shortcut = SubResource("Shortcut_ceecq")
+text = "RESTART"
+icon = ExtResource("1_hl30u")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_0co4t")
+
+[connection signal="pressed" from="Opciones" to="Opciones" method="_on_pressed"]
+[connection signal="pressed" from="Restart" to="Opciones" method="_on_restart_pressed"]
